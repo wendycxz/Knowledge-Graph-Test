@@ -3,3 +3,12 @@
 # Manually managing azure-functions-worker may cause unexpected issues
 
 azure-functions
+# Packages needed to call AOAI API with the OpenAI Python API
+openai
+
+# Packages needed to run the notebook samples
+jupyter
+
+# Other packages needed to run the notebook samples
+langchain
+json

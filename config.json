@@ -1,0 +1,5 @@
+{
+    "DEPLOYMENT_NAME":"openaiforknowledgegraph",
+    "OPENAI_API_BASE":"https://knowledgegraphopenai.openai.azure.com/",
+    "OPENAI_API_VERSION":"2024-02-01"
+}
