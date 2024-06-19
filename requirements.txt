@@ -20,3 +20,4 @@ pdfplumber
 PyMuPDF 
 nltk
 neo4j
+json

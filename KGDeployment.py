@@ -1,4 +1,5 @@
 import os
+import json
 from dotenv import load_dotenv
 import streamlit as st
 from langchain.chains import GraphCypherQAChain
@@ -61,14 +62,12 @@ query = st.text_input("Enter your question:")
 if st.button("Ask"):
     if query:
         try:
-            # Execute the query using the knowledge graph
             result = cypher_chain.run(query)
-            if result:
-                st.success("Query successful!")
-                st.json(result)  # Display the result as JSON for structured output
-            else:
-                st.info("No data found for your query.")
+            try:
+                json_data = json.loads(result)  # Try parsing the result as JSON
+                st.json(json_data)  # Display the JSON formatted data
+            except json.JSONDecodeError:
+                st.write("Response:", result)  # Fallback if response is not JSON
+            st.success("Query successful!")
         except Exception as e:
             st.error(f"An error occurred: {e}")
-    else:
-        st.warning("Please enter a question to ask the chatbot.")
