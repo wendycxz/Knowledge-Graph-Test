@@ -11,5 +11,4 @@ jupyter
 
 # Other packages needed to run the notebook samples
 langchain
-json
 streamlit
