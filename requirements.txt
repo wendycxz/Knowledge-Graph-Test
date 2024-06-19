@@ -13,3 +13,4 @@ jupyter
 langchain
 streamlit
 python-dotenv
+langchain-community
