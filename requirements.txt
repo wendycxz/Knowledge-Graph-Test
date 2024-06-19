@@ -12,3 +12,4 @@ jupyter
 # Other packages needed to run the notebook samples
 langchain
 streamlit
+dotenv
