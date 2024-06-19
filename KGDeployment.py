@@ -31,7 +31,7 @@ cypher_llm = AzureChatOpenAI(
     azure_endpoint="https://knowledgegraphopenai.openai.azure.com/",
     openai_api_version="v1",
     deployment_name="knowledgegraphGPT4",
-    openai_api_key=OPENAI_API_KEY,
+    openai_api_key=openai_api_key,
     openai_api_type="azure",
 )
 
@@ -39,7 +39,7 @@ qa_llm = AzureChatOpenAI(
     azure_endpoint="https://knowledgegraphopenai.openai.azure.com/",
     openai_api_version="v1",
     deployment_name="openaiforknowledgegraph",
-    openai_api_key=OPENAI_API_KEY,
+    openai_api_key=openai_api_key,
     openai_api_type="azure",
 )
 
