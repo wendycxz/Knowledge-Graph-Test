@@ -20,4 +20,3 @@ pdfplumber
 PyMuPDF 
 nltk
 neo4j
--U langchain-community
