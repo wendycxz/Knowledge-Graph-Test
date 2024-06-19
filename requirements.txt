@@ -14,3 +14,9 @@ langchain
 streamlit
 python-dotenv
 langchain-community
+langchain_openai
+wikipedia
+pdfplumber 
+PyMuPDF 
+nltk
+neo4j
