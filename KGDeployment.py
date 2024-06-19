@@ -61,9 +61,14 @@ query = st.text_input("Enter your question:")
 if st.button("Ask"):
     if query:
         try:
+            # Execute the query using the knowledge graph
             result = cypher_chain.run(query)
-            st.write(result)
+            if result:
+                st.success("Query successful!")
+                st.json(result)  # Display the result as JSON for structured output
+            else:
+                st.info("No data found for your query.")
         except Exception as e:
-            st.error(f"Error: {e}")
+            st.error(f"An error occurred: {e}")
     else:
         st.warning("Please enter a question to ask the chatbot.")
