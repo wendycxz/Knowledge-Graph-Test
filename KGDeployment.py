@@ -2,7 +2,7 @@ import os
 from dotenv import load_dotenv
 import streamlit as st
 from langchain.chains import GraphCypherQAChain
-from langchain.llms import AzureChatOpenAI
+from langchain.chat_models import AzureChatOpenAI
 from langchain.graphs import Neo4jGraph
 
 # Load environment variables from .env file
