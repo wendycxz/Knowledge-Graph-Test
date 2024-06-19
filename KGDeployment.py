@@ -53,12 +53,12 @@ cypher_chain = GraphCypherQAChain.from_llm(
 )
 
 # Streamlit UI
-st.title("Knowledge Graph Query Interface")
-st.write("Enter your query below and get responses from the knowledge graph.")
+st.title("Knowledge Graph Chatbot")
+st.write("Ask any question about the data in our knowledge graph:")
 
-query = st.text_input("Enter your query:")
+query = st.text_input("Enter your question:")
 
-if st.button("Run Query"):
+if st.button("Ask"):
     if query:
         try:
             result = cypher_chain.run(query)
@@ -66,4 +66,4 @@ if st.button("Run Query"):
         except Exception as e:
             st.error(f"Error: {e}")
     else:
-        st.warning("Please enter a query to run.")
+        st.warning("Please enter a question to ask the chatbot.")
